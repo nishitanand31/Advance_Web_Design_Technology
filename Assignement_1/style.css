@@ -1,0 +1,83 @@
+.backgr{
+    background-color: #E0E0E0;
+    clear: 
+}
+
+.RIMG{
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.BarBar{
+    float: left;
+}
+
+.Leftbar{
+    
+    float:right;
+    margin-top: 27px;
+    margin-left: 20px;
+    
+}
+
+.Leftbell{
+    
+    float:right;
+    margin-top: 25px;
+    margin-left: 10px;
+    
+}
+.Cal{
+    margin-left: 10px;
+    color: #FF0000;
+}
+
+.marg{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Dte{
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-top: 10px;
+    color: black;
+}
+
+.btnn{
+    border:none;
+    color: #696969;
+    background-color: #E0E0E0;
+}
+
+
+.Smarg{
+      margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.SSmarg{
+      margin-top: 30px;
+        margin-bottom: 10px;
+    
+}
+
+.NavMar{
+    margin-bottom:0px;
+}
+
+.Date{
+    margin-left:67px;
+    margin-bottom:5px;
+}
+
+.date{
+    margin-left:33px;
+}
+
+.CCS{
+    float:left;
+    clear;
+}

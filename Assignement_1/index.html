@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First Bootstrap Assignment</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+            <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+            <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+            <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    
+<body>
+
+<!---------- Navigation Begins ---------->
+<div class="Navigation">
+    
+  <nav class="navbar navbar-inverse NavMar">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">+Nishit</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Search</a></li>
+        <li><a href="#">Images</a></a></li>
+          <li><a href="#">Mail</Mail></a></li>
+            <li><a href="#">Drive</a></li>
+              <li><a href="#">Calendar</a></li>
+                <li><a href="#">Sites</a></li>
+                  <li><a href="#">Groups</a></li>
+                    <li><a href="#">Contacts</a></li>
+            
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Translator</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </li>
+      </ul>
+     
+    
+    </div><!-- /.navbar-collapse -->
+  <!------------------- END of Nav Bar -------------->
+
+    </div> <!-- /.container-fluid -->
+  </nav>
+  </div> <!---------------END of Div for Navigation -------------------->
+  
+  <!--------------Rutges Image Bar ------------>
+  <div class="row backgr">
+      
+      <!-------Column for image ------>
+      <div class="col-xs-2 RIMG">
+          
+          <img src="RutgersLogo.jpg" height=100px width=170px>
+          
+          </img>
+         
+      </div><!------ end of col img----->
+      
+      <!------div 2 begins----------->
+      <div class="col-xs-3">
+         <form class="navbar-form navbar-left">
+        <div class="form-group Smarg">
+          <input type="text" class="form-control" placeholder="Search Calendar">
+        </div>
+        <button type="submit" class="btn btn-primary SSmarg">  <span class="glyphicon glyphicon-search" aria-hidden="true">  </button>
+      </form>
+      </div> <!--------End of div2----->
+      
+      
+      <!----------------------Nishit Anand-------------------------------------->
+      
+      <!------div 3 begins----------->
+      <div class="col-xs-3">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div> <!--------End of div 3----->
+      
+      <div class="col-xs-4  col-xs-offset-2">
+        
+        <div class="Leftbell">
+           na367@scarletmail.rutgers.edu
+           &nbsp;
+           <button type="button" class="btn btn-default btnn"> <span class="glyphicon glyphicon-bell" aria-hidden="true"></span></button>
+             
+             &nbsp;
+             
+             <button type="button" class="btn btn-default btnn"> + Share </button>
+        &nbsp;
+        <button type="button" class="btn btn-info btnn"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span></button>
+          
+        </div>
+        
+        
+      </div>
+
+    
+      
+  </div> <!-------- End of Image Row------->
+  
+  
+  
+  
+  
+  <!---------------------------------- Beginning of Calendar and Toggle for weeks and stuff-------------->
+<div class="row">
+          <div class="col-sm-2"><h3 class="Cal">Calendar</h3></div>
+          <div class="col-sm-1">
+            <p><a href="#" class="btn btn-default marg">Today</a></p>
+          </div>
+          <div class="col-sm-1">
+            <div class="btn-group">
+              <span class="btn btn-default glyphicon glyphicon-chevron-left marg"></span>
+              <span class="btn btn-default glyphicon glyphicon-chevron-right marg"></span>
+            </div>
+          </div>
+          <div class="col-sm-2 marg">
+            <h5 class="Dte">Feb 12th - 18th,2017</h5> <!-------------------- This is not working--------------->
+          </div>
+          <div class="col-xs-4 col-xs-push-1">
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default marg">
+                <input type="radio" name="options" id="option1"> Day
+              </label>
+              <label class="btn btn-default active marg">
+                <input type="radio" name="options" id="option2" checked> Week
+              </label>
+              <label class="btn btn-default marg">
+                <input type="radio" name="options" id="option3"> Month
+              </label>
+              <label class="btn btn-default marg">
+                <input type="radio" name="options" id="option4"> 4 Days
+              </label>
+              <label class="btn btn-default marg">
+                <input type="radio" name="options" id="option5"> Agenda
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-1">
+            <div class="btn-group marg">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                More <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Print</a></li>
+                <li><a href="#">Refresh</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-1">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle marg" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li class="marg">&nbsp;&nbsp;Display Density:</li>
+                <li><a href="#">Comfortable</a></li>
+                <li><a href="#">Cozy</a></li>
+                <li><a href="#">Compact</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Labs</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Send feedback</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+    
+  <!---------------------- Calendar Grid --------------------------->
+  
+    <!------------------------------------------------------ Extra Credit ---------------------------------------------->
+  
+  <div clas="row">
+  
+  <div class="col-xs-2">
+  <div class="dropdown">
+  <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown"> Create|
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">&nbsp; Quick Add <br>
+    <form class="navbar-form navbar-left">
+        <div class="form-group CCS">
+          <input type="text" class="form-control" position=align-left placeholder=" ">
+          <button type="submit" class="btn btn-default float" position=align-right>Add</button>
+          </div>
+      </form>
+      
+  </ul>
+</div>
+
+
+</div> <!---------End of Create Button------------->
+  
+  
+  
+  <!-- Calendar -->
+        <div class="col-xs-10">
+          <div class="row">
+            <div class="col-xs-12 Date">
+              <ul class="nav nav-tabs nav-justified marg" role="tablist">
+                <li><a href="#" role="tab" data-toggle="tab">Sun 2/12</a></li>
+                <li class="active"><a href="#" role="tab" data-toggle="tab">Mon 2/13</a></li>
+                <li><a href="#" role="tab" data-toggle="tab">Tue 2/14</a></li>
+                <li><a href="#" role="tab" data-toggle="tab">Wed 2/15</a></li>
+                <li><a href="#" role="tab" data-toggle="tab">Thu 2/16</a></li>
+                <li><a href="#" role="tab" data-toggle="tab">Fri 2/17</a></li>
+                <li><a href="#" role="tab" data-toggle="tab">Sat 2/18</a></li>
+              </ul>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">12am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">1am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">2am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row"> 
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">3am &nbsp;<br></div> 
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">4am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">5am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">6am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">7am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">8am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">9am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">10am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">11am &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <div class="row">
+                  <div class="col-xs-8 col-xs-offset-1 col-xs-push-3 table-bordered">12pm &nbsp;</div>
+                </div>
+              </div>
+              <div class="col-xs-11">
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="row">
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-3 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="row">
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                      <div class="col-xs-4 table-bordered"><br>&nbsp;</div> <!-----------------date CSS does not work on small screens----------->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> 
+      </div> <!--------------Div Ends for ROW------------------------------------>
+        <!-----------------------------End of Grid ------------------------------------------------------->
+    
+    
+    
+    
+    <!------------------------------------------ Just for some spacing after the grid----------------->
+    
+    <div class="row">
+      <div class="col-xs-6 marg">
+        &nbsp;
+      </div>
+      
+      <div class="col-xs-6 marg">
+        &nbsp;
+      </div>
+      
+    </div>
+    
+</body>
+</html>
