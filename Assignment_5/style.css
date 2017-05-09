@@ -1,0 +1,24 @@
+#errors {
+    color: red;
+    white-space: pre-line;
+}
+
+#output .tweet .user {
+    font-weight: bold;
+}
+
+.retweet_count{
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
+
+.favourite{
+    background-color: #2AB79F;
+    color: white;
+    font-weight: bold;
+}
+
+.user_img{
+ margin-top: 20px;   
+}
