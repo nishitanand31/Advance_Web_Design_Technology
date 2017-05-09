@@ -1,0 +1,14 @@
+
+.myform{
+    margin: 20px 0 30px 160px;
+    
+}
+
+#selectState{
+    margin-left: 10px;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}

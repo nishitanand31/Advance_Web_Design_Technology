@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            
+            <script type="text/javascript" src="script.js"></script>
+            <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+            <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+            <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="style.css" type="text/css" />
+         <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+    
+    <body>
+    
+
+        <h1 class="container myform">My Form</h1>
+
+
+
+    <div id="Errors"> </div>
+
+
+
+<form id="my-form" class="container form-horizontal" action="form.php" method="POST">
+                 
+      
+    
+          <div class="form-group">
+               <label class="control-label col-xs-2">First Name:</label>
+               <div class="col-xs-6">
+               <input id="firstName" type="text" class="form-control" name="firstName">
+                    
+                 </div>
+                 
+                 <div class="col-xs-4"></br></div>
+            </div>  
+        
+            
+            
+                <div class="form-group">
+                    <label class="control-label col-xs-2">Last Name: </label>
+                        <div class="col-xs-6">
+                            <input id="lastName" type="text" class="form-control" name="lastName">
+                        </div>
+                        
+                        <div class="col-xs-4"></div>
+                </div>
+            
+            
+            
+            
+            
+            <div class="form-group">
+                <label id="Email" class="control-label col-xs-2">Email:</label>
+                    <div class="col-xs-6">
+                        <input id="inputEmail" type="email" class="form-control" name="inputEmail">
+                    </div>
+                    
+                    <div class="col-xs-4"></div>
+            </div>
+            
+            
+            
+            
+            <div class="form-group">
+                <label id="telephone" class="control-label col-xs-2">Telephone:</label>
+                    <div class="col-xs-6">
+                        <input id="inputTelephone" type="text" class="form-control" name="inputTelephone">
+                    </div>
+                    <div class="col-xs-4"></div>
+            </div>
+            
+            
+            <div class="form-group">
+                <label id="city" class="control-label col-xs-2">City: </label>
+                    <div class="col-xs-6">
+                        <input id="inputCity" type="text" class="form-control" name="inputCity">
+                    </div>
+                    
+                    <div class="col-xs-4"></div>
+            </div>
+            
+    
+    
+        <div class="form-group">
+            <label id="selectState" class="control-label col-xs-2">State: </label>
+        
+                <div class="col-xs-6">
+                    <select id="state" type="state" class="form-control" name="state">
+                    <option value="" selected="selected">Select a State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+                  
+            </div> <!----------- for the dropdown------->
+            
+            <div class="col-xs-4"></div>
+        </div> <!----------form Div ------>
+    
+    
+            <div class="form-group">
+                <label id="zipcode" class="control-label col-xs-2">Zip Code: </label>
+                    <div class="col-xs-6">
+                        <input  id="zip" type="text" class="form-control" name="zip">
+                    </div>
+                         <div class="col-xs-4"></div>
+            </div>
+    
+     <div class="row">
+        <div class="col-sm-offset-2 col-sm-2">
+            <div class="checkbox">
+                <label><input type="checkbox"> I agree to terms</label>
+            </div>
+          </div>
+        
+        <div class="col-sm-1">
+        <!-- Button trigger modal -->
+    <label data-toggle="modal" data-target="#myModal">See terms</label></label>
+
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Showing you....</h4>
+                </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel vehicula erat. Phasellus vestibulum leo eu mi tempor blandit. Suspendisse eget iaculis lectus. Donec vitae tempus enim, quis tristique magna. Donec lobortis, sem ac pretium viverra, leo nisl consequat arcu, sit amet ullamcorper nunc turpis ac erat. In rutrum auctor ligula, quis mattis enim lacinia eu. Aliquam at magna a erat laoreet iaculis quis a justo. Donec porttitor vulputate massa, nec suscipit nisi mollis sed.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel vehicula erat. Phasellus vestibulum leo eu mi tempor blandit. Suspendisse eget iaculis lectus. Donec vitae tempus enim, quis tristique magna. Donec lobortis, sem ac pretium viverra, leo nisl consequat arcu, sit amet ullamcorper nunc turpis ac erat. In rutrum auctor ligula, quis mattis enim lacinia eu. Aliquam at magna a erat laoreet iaculis quis a justo. Donec porttitor vulputate massa, nec suscipit nisi mollis sed.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel vehicula erat. Phasellus vestibulum leo eu mi tempor blandit. Suspendisse eget iaculis lectus. Donec vitae tempus enim, quis tristique magna. Donec lobortis, sem ac pretium viverra, leo nisl consequat arcu, sit amet ullamcorper nunc turpis ac erat. In rutrum auctor ligula, quis mattis enim lacinia eu. Aliquam at magna a erat laoreet iaculis quis a justo. Donec porttitor vulputate massa, nec suscipit nisi mollis sed.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel vehicula erat. Phasellus vestibulum leo eu mi tempor blandit. Suspendisse eget iaculis lectus. Donec vitae tempus enim, quis tristique magna. Donec lobortis, sem ac pretium viverra, leo nisl consequat arcu, sit amet ullamcorper nunc turpis ac erat. In rutrum auctor ligula, quis mattis enim lacinia eu. Aliquam at magna a erat laoreet iaculis quis a justo. Donec porttitor vulputate massa, nec suscipit nisi mollis sed.</p>
+                <p>Cras pellentesque urna a leo egestas, at ullamcorper augue suscipit. Nulla id lacinia magna, non iaculis est. Praesent a placerat augue, eget eleifend purus. Aenean dignissim, orci et rutrum facilisis, tellus massa porta nulla, quis hendrerit dui ipsum vitae urna. In mattis lectus dolor, id venenatis lectus pellentesque at. Suspendisse posuere metus vel bibendum dignissim. Fusce interdum magna id libero scelerisque suscipit. Duis orci augue, rhoncus eget pharetra ac, viverra nec magna. In accumsan nulla ac suscipit pellentesque. Nulla iaculis luctus tellus, at ultricies urna hendrerit a. Aenean vehicula sodales varius. Duis sodales hendrerit odio non sagittis.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+            </div>
+            </div>
+        <!-- /.modal-content -->
+        </div>
+    <!-- /.modal-dialog -->
+    </div>
+<!-- /.modal -->
+      
+      </div>
+      
+    </div>
+    
+    
+    
+          <div class="form-group">
+                <label id="reCapta" class="control-label col-xs-2"> </label>
+                    <div class="col-xs-6">
+                        <div class="g-recaptcha" data-sitekey="6LfqcxoUAAAAAAnSlhYY2tSuLNnKq21JCE6uNtvS"></div>
+ 
+                    </div>
+                         <div class="col-xs-4"></div>
+            </div>
+    
+
+     <div class="form-group">
+        <div class="col-xs-10 col-xs-offset-2">
+            <input id="submit" type="submit" class="btn btn-primary" value="Submit"/>
+        </div>
+    </div>
+    
+</form>
+
+
+
+</body>
+</html>
