@@ -1,0 +1,29 @@
+.Parallax {
+    /* The image used */
+    background-image: url('final.jpg');
+
+    /* Full height */
+    size: portrait;
+    height: 100%; 
+    
+    
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#headings{
+    color: #7B4976;
+}
+.headings1{
+    color: #7B4976;
+}
+.p1{
+    font-weight: bold;
+}
+.p2{
+    font-weight: bold;
+}
