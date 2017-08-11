@@ -1,0 +1,185 @@
+body {
+    width: 100%;
+    max-width: 100%;
+}
+.nav ul {
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.nav ul li {
+    display: inline-block;
+}
+.list-item {
+    padding: 20px;
+    border: 1px solid #05193e;
+    text-align: center;
+    margin-left: 0px;
+    background-color: #021331;
+    color: #fff;
+    font-size: medium;
+    width: 100%;
+}
+
+.list-item:hover {
+    border: 1px solid #021331;
+    background-color: #fff;
+    color: #001a70;
+    font-size: medium;
+}
+.dropdown-menu {
+    position: relative;
+    min-width: 100%;
+    border: 1px solid #001a70;
+    border-radius: 0px;
+    margin: 2px 1px 2px -1px;
+}
+.dropdown-menu li {
+    width: 100%;
+}
+.dropdown-menu li a:hover {
+    background-color: #021331;
+    color: #fff;
+}
+.top-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+.top-container img {
+    width: 100%;
+}
+figcaption {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
+}
+.caption-info {
+    width: 100%;
+    background-color: rgba(255,255,255,.2);
+    color: #fff;
+    padding: 20px 20px 20px 20px;
+    text-align: right;
+}
+figure {
+    margin: 0;
+    height: auto;
+    margin-bottom: 0px;
+    position: relative;
+}
+footer {
+    background-color: #021331;
+    margin: 15px;
+    padding: 15px;
+    border-top: 5px solid #a4a6a8;
+
+}
+footer .footer-headers {
+    font-size: large;
+    color: #a4a6a8;
+}
+footer ul {
+    list-style: none;
+    padding-left: 0px;
+}
+footer p {
+    color: #fff;
+}
+footer span {
+    color: #a4a6a8;
+}
+.copyright {
+    background-color: #a4a6a8;
+    color: #021331;
+    margin: 15px;
+    padding-top: 10px;
+}
+footer a {
+    text-decoration: none !important;
+    color: #fff !important;
+    transition: all .2s;
+}
+
+footer a:hover {
+    color: #2d7292  !important;
+}
+.btn-primary {
+        color: #fff;
+    background-color: #021331;
+    border-color: #a4a6a8;
+    border-radius: inherit;
+    width: 100%;
+}
+
+
+/* Airbnb CSS*/
+#errors {
+    color: red;
+    white-space: pre-line;
+}
+
+.date{
+    padding-top: 15px;
+    font-family: "Andale Mono", AndaleMono, monospace;
+	font-size: 18px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 20.4px;
+    
+}
+.title{
+    
+    
+}
+.favs{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.resp{
+    border: 2px solid black;
+    margin: 10px 5px 10px 5px;
+    padding-left:5px;
+}
+
+
+.head1 {
+	font-family: "Andale Mono", AndaleMono, monospace;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow: hidden;
+    z-index: -100;
+}
+
+#whitebg{
+ background-color: white;   
+}
+
+#map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
