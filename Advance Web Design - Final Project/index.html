@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Final Project </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+    <!-- Container Starts -->
+    <div class="container">
+        <!-- Top Container Starts -->
+        <div class="top-container">
+            <figure>
+                <img src="http://wallpaper-gallery.net/images/free-beach-scene-wallpaper/free-beach-scene-wallpaper-24.jpg" />
+
+            </figure>
+        </div>
+        <!-- Top Container Ends -->
+        <!-- Header Starts -->
+        <header>
+            <!-- Nav Bar Starts -->
+
+            <!-- Nav Bar Ends -->
+        </header>
+        <!-- Header Ends -->
+        <!-- Form Starts -->
+        <div class="bootstrap-iso">
+            <!-- Container Fluid Starts -->
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-offset-3 col-sm-6 col-xs-12 ">
+                        <form id="address-form" action="" method="get">
+                            <div class="form-group ">
+                                <label class="control-label " for="first-name">
+                         <h1>   Enter Your Destination! </h1>
+                        </label>
+                                <input class="form-control" id="address" name="address" placeholder="Location" type="text" />
+                                </br>
+                                <input class="btn btn-primary" type="submit" value="Submit Destination" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="instagram-images"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Form Ends -->
+
+
+
+
+
+        <div class="container">
+
+            <div class="col-md-6" id="airbnb"></div>
+            <div class="col-md-6" id="weather"></div>
+
+        </div>
+    </div>
+
+    <html>
+
+    <head>
+        <style>
+            #map {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <div class="container">
+
+        <body>
+            <h3>Location of AirBnBs</h3>
+            <div id="map"></div>
+            <script>
+                var map;
+
+                function initMap() {
+                    var uluru = {
+                        lat: 40.7128,
+                        lng: -74.0
+                    };
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 10,
+                        center: uluru
+                    });
+
+                }
+
+                function addMarker(location, PropName) {
+                    marker = new google.maps.Marker({
+                        position: location,
+                        map: map,
+                        title: PropName
+                    });
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFjDwPwhOAHIIksBk6Wl7k5HoHTWceEU0&callback=initMap">
+            </script>
+        </body>
+
+    </html>
+
+    <script>
+        $('#address-form').submit(function(event) {
+
+            var airbnbKey = '3092nxybyb0otqw18e8nh5nty';
+            var address = $('#address').val();
+            $.ajax({
+                url: 'airbnb.php',
+                type: 'GET',
+                dataType: 'JSON',
+                data: {
+                    client_id: airbnbKey,
+                    locale: 'en-US',
+                    currency: 'USD',
+                    _limit: '10',
+                    //user_lat: latti,
+                    //user_lng: longi,
+                    location: address,
+                    //favorites: favorites,
+                    //sort: sort,
+                    //sort_descending: sort_descending,
+                    //body: body
+                },
+
+                success: function(serverResponse) {
+                    //alert(serverResponse);
+                    //$("#output").append(serverResponse);
+                    console.log('success');
+
+                    for (var i = 0; i < serverResponse.search_results.length; i++) {
+
+                        var location = new google.maps.LatLng(serverResponse.search_results[i].listing.lat, serverResponse.search_results[i].listing.lng);
+                        var PropName = serverResponse.search_results[i].listing.name;
+
+                        
+
+                        addMarker(location, PropName);
+                    }
+                    map.setCenter(location);
+
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+
+
+                    if (errorThrown == 'Service Unavailable') {
+                        $('#errors').append("<p>Your cloud 9 instance isn't running!</p>");
+                    }
+                    else {
+                        $('#errors').append("<p>An unknown error occurred: " + errorThrown + "</p>");
+                    }
+                },
+                complete: function() {
+                    // remove the "let user know something is happening" thing, since the request is done
+                    allowAjaxHide = true;
+                    $("#ajaxIndicator").modal('hide');
+                }
+            });
+        });
+    </script>
+
+    </div>
+
+
+    <!--footer start from here-->
+    <div class="container">
+        <footer>
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6 footerleft ">
+                    <div class="footer-headers">Plan Your Vaction!</div>
+                </div>
+                <div class="col-md-2 col-sm-6 paddingtop-bottom">
+                    <h6 class="footer-headers">GENERAL LINKS</h6>
+                    <ul class="footer-ul">
+                        <li><a href="#"> Home</a></li>
+                        <li><a href="#"> About us</a></li>
+                        <li><a href="#"> Contact us</a></li>
+                        <li><a href="#"> Connect with us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <div class="fb-xfbml-parse-ignore">
+                            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                            <blockquote cite="https://www.linkedin.com/linkedin"><a href="https://www.linkedin.com/linkedin">LinkedIn</a></blockquote>
+                            <blockquote cite="https://www.twitter.com/twitter"><a href="https://www.twitter.com/twitter">Twitter</a></blockquote>
+                            <blockquote cite="https://www.YouTube.com/YouTube"><a href="https://www.YouTube.com/YouTube">YouTube</a></blockquote>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </footer>
+    <!--footer start End  here-->
+
+
+
+
+    </div>
+    <!-- Container Ends -->
+
+</body>
+
+</html>
